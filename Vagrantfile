@@ -90,7 +90,7 @@ Vagrant.configure(2) do |config|
     end
 
   config.vm.provision :shell, :inline => "sudo apt-get update"
-  config.vm.provision :shell, :inline => "sudo apt-get install mono-devel mono-gmcs nant"
+  config.vm.provision :shell, :inline => "sudo apt-get -y install mono-devel mono-gmcs nant"
 
 $dotfilesScript = <<SCRIPT
 if [ ! -d "/home/vagrant/dotfiles" ]; then
